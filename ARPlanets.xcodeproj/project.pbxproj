@@ -13,6 +13,9 @@
 		D5AC268E28A56F6E00CEE78D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AC268C28A56F6E00CEE78D /* Main.storyboard */; };
 		D5AC269028A56F7000CEE78D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AC268F28A56F7000CEE78D /* Assets.xcassets */; };
 		D5AC269328A56F7000CEE78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AC269128A56F7000CEE78D /* LaunchScreen.storyboard */; };
+		D5AC269D28A70BC700CEE78D /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC269C28A70BC700CEE78D /* Planets.swift */; };
+		D5AC269F28A720D900CEE78D /* PlanetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC269E28A720D900CEE78D /* PlanetCollectionViewController.swift */; };
+		D5AC26C028B0147A00CEE78D /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC26BF28B0147A00CEE78D /* PlanetCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		D5AC268D28A56F6E00CEE78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5AC268F28A56F7000CEE78D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5AC269228A56F7000CEE78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5AC269C28A70BC700CEE78D /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		D5AC269E28A720D900CEE78D /* PlanetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewController.swift; sourceTree = "<group>"; };
+		D5AC26BF28B0147A00CEE78D /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +45,7 @@
 		D5AC267A28A56F6E00CEE78D = {
 			isa = PBXGroup;
 			children = (
-				D5AC268528A56F6E00CEE78D /* ARDice */,
+				D5AC268528A56F6E00CEE78D /* ARPlanets */,
 				D5AC268428A56F6E00CEE78D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,17 +58,44 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5AC268528A56F6E00CEE78D /* ARDice */ = {
+		D5AC268528A56F6E00CEE78D /* ARPlanets */ = {
 			isa = PBXGroup;
 			children = (
+				D5AC269B28A70BB900CEE78D /* Model */,
 				D5AC268628A56F6E00CEE78D /* AppDelegate.swift */,
+				D5AC269928A70BA600CEE78D /* Controllers */,
+				D5AC269A28A70BB100CEE78D /* Views */,
 				D5AC268828A56F6E00CEE78D /* art.scnassets */,
-				D5AC268A28A56F6E00CEE78D /* ViewController.swift */,
-				D5AC268C28A56F6E00CEE78D /* Main.storyboard */,
 				D5AC268F28A56F7000CEE78D /* Assets.xcassets */,
 				D5AC269128A56F7000CEE78D /* LaunchScreen.storyboard */,
 			);
-			path = ARDice;
+			path = ARPlanets;
+			sourceTree = "<group>";
+		};
+		D5AC269928A70BA600CEE78D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC26BF28B0147A00CEE78D /* PlanetCollectionViewCell.swift */,
+				D5AC268A28A56F6E00CEE78D /* ViewController.swift */,
+				D5AC269E28A720D900CEE78D /* PlanetCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5AC269A28A70BB100CEE78D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC268C28A56F6E00CEE78D /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5AC269B28A70BB900CEE78D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC269C28A70BC700CEE78D /* Planets.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5AC267E28A56F6E00CEE78D /* Build configuration list for PBXProject "ARDice" */;
+			buildConfigurationList = D5AC267E28A56F6E00CEE78D /* Build configuration list for PBXProject "ARPlanets" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,6 +172,9 @@
 			files = (
 				D5AC268B28A56F6E00CEE78D /* ViewController.swift in Sources */,
 				D5AC268728A56F6E00CEE78D /* AppDelegate.swift in Sources */,
+				D5AC26C028B0147A00CEE78D /* PlanetCollectionViewCell.swift in Sources */,
+				D5AC269F28A720D900CEE78D /* PlanetCollectionViewController.swift in Sources */,
+				D5AC269D28A70BC700CEE78D /* Planets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5AC267E28A56F6E00CEE78D /* Build configuration list for PBXProject "ARDice" */ = {
+		D5AC267E28A56F6E00CEE78D /* Build configuration list for PBXProject "ARPlanets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5AC269428A56F7000CEE78D /* Debug */,
