@@ -12,8 +12,11 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    //private var currentPlanetSelection: String?
+    private var planetArray = [SCNNode]()
     
-    var planetArray = [SCNNode]()
+    private let userDefaults = UserDefaults.standard
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
+
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
@@ -47,6 +51,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,55 +63,37 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        var planetModel = Planets()
         if let touchLocation = touches.first?.location(in: sceneView){
             
-            guard let query = sceneView.raycastQuery(from: touchLocation, allowing: .existingPlaneGeometry, alignment: .any) else {return}
+            guard let query = sceneView.raycastQuery(from: touchLocation, allowing: .existingPlaneInfinite, alignment: .any) else {return}
             
             let results = sceneView.session.raycast(query)
             
             if let hitResult = results.first {
                 
-                let node = createNode(atLocation: hitResult)
+                //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController. Sets the planet property on the Planet Class
+                
+                if let currentPlanet = userDefaults.object(forKey: "currentPlanetSelection") as? String {
+                    
+                    planetModel.currentPlanet = currentPlanet
+                }else{
+                    userDefaults.set("Earth Daytime", forKey: "currentPlanetSelection")
+                }
+                let node = planetModel.createPlanetNode(atLocation: hitResult)
+                
+                planetArray.append(node)
                 
                 sceneView.scene.rootNode.addChildNode(node)
                 
                 node.runAction(
-                    SCNAction.rotateBy(x: CGFloat(80), y: CGFloat(80), z: CGFloat(0.0), duration: 90))
+                    SCNAction.rotateBy(x: CGFloat(80), y: CGFloat(80), z: CGFloat(0.0), duration: 3600))
             }
             
         }
     }
     
-    //put the roation of the node here
-    func rotation(){
-        
-    }
-    
-    //creates sphere to be used to create planets, should take a parameter of UIImage to choose planet
-    func createSphere() -> SCNSphere{
-        let sphere = SCNSphere(radius: 0.2)
-        let material = SCNMaterial()
-        
-        material.diffuse.contents = UIImage(named: "art.scnassets/moon.jpeg")
-        
-        sphere.materials = [material]
-        
-        return sphere
-    }
-    
-    func createNode(atLocation location: ARRaycastResult) -> SCNNode {
-        let node = SCNNode()
-        
-        node.geometry = createSphere()
-        node.position = SCNVector3(
-            x: location.worldTransform.columns.3.x,
-            y: location.worldTransform.columns.3.y + createSphere().boundingSphere.radius,
-            z: location.worldTransform.columns.3.z)
-        
-        planetArray.append(node)
-        return node
-    }
-
     //MARK: - ARSCNViewDelegateMethods
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
@@ -136,12 +124,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return planeNode
     }
     
+    @IBAction func removeLastObject(_ sender: UIBarButtonItem) {
+        removeLastPlanet()
+        
+    }
+    
     func removeLastPlanet(){
         let planetsWithIndex = planetArray.enumerated()
         if !planetArray.isEmpty{
             for (index, planet) in planetsWithIndex{
                 if index == planetArray.count - 1 {
                     planet.removeFromParentNode()
+                    planetArray.removeLast()
                 }
             }
         }
@@ -154,13 +148,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
-    @IBAction func removeLastObject(_ sender: UIBarButtonItem) {
-        removeLastPlanet()
-        
-    }
+    
+    
 }
-
-
-
+  
 
 
