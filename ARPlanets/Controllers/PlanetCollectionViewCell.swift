@@ -9,13 +9,15 @@ import UIKit
 
 class PlanetCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var PlanetName: UILabel!
     
-    var currentPlanet: String = ""
+    @IBOutlet weak var PlanetCollectionImage: UIImageView!
+    private var userDefaults = UserDefaults.standard
+
     
     func configure(with planetName: String){
+        let currentPlanet = userDefaults.object(forKey: "currentPlanetSelection")
         
-
+        PlanetCollectionImage.image = UIImage(named: "Moon.jpeg")
     }
     
     func selectBackgroundImage(){
@@ -30,5 +32,7 @@ class PlanetCollectionViewCell: UICollectionViewCell {
 //        default: planetImage.image = UIImage(named: "art.scnassets/moon.jpeg")
 //        }
     }
+    
+    
     
 }

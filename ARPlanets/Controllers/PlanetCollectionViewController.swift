@@ -21,24 +21,13 @@ class PlanetCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         planetsList = ["Mars", "Earth Clouds", "moon"]
-        
-        collectionView?.backgroundColor = .systemBackground
-
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PlanetCell")
 
     }
 
-
-
     // MARK: UICollectionViewDataSource
 
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return planetsList.count
-//    }
-    
     override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) {
             cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -67,21 +56,19 @@ class PlanetCollectionViewController: UICollectionViewController {
         //need to actually handle in case of error and not return empty cell.
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlanetCell", for: indexPath) as? PlanetCollectionViewCell{
             cell.configure(with: planetsList[indexPath.row])
-            cell.backgroundColor = .systemRed
-            
             
             return cell
-            
         }
-        
-        
-        
         return cell
-    
-        
     }
-
-
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+            // In this function is the code you must implement to your code project if you want to change size of Collection view
+            let width  = (view.frame.width-20)/3
+            let height = (view.frame.height-20)/3
+            return CGSize(width: width, height: height)
+    }
+    
+    
+    
 }
 

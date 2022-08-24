@@ -8,6 +8,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import SwiftUI
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -16,6 +17,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private var planetArray = [SCNNode]()
     
     private let userDefaults = UserDefaults.standard
+    
+    private let swiftUIController = UIHostingController(rootView: PlanetCollectionView())
 
     
     override func viewDidLoad() {
@@ -124,6 +127,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return planeNode
     }
     
+    @IBAction func selectPlanet(_ sender: Any) {
+        navigationController?.pushViewController(swiftUIController, animated: true)
+        
+    }
     @IBAction func removeLastObject(_ sender: UIBarButtonItem) {
         removeLastPlanet()
         

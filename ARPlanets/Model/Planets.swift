@@ -44,12 +44,12 @@ struct Planets {
     mutating func setRadius(){
         switch currentPlanet {
         case "moon":
-            radius = 0.2
+            radius = 0.01
         case "earth":
-           radius = 0.5
+           radius = 0.05
         case "Sun":
-            radius = 1.5
-        default: radius = 0.5
+            radius = 0.1
+        default: radius = 0.05
         }
     }
     
