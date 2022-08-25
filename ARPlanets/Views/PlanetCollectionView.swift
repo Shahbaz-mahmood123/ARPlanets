@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct PlanetCollectionView: View {
-
+    
     @ObservedObject var vm = PlanetCollectionViewModel()
 
     var body: some View {
-        ZStack{
-            Text(vm.planet.currentPlanet)
-            
-        }.onAppear(perform: { vm.setPlanet()})
+        
+        ScrollView{
+            ForEach(vm.arrayOfPlanets, id: \.id){ planet in
+                HStack{
+                    PlanetCollectionViewCellUI(name: planet.name, row: vm.arrayOfPlanets.count)
+                }.onTapGesture {
+                    vm.setPlanet(planet.name)
+                }
+            }
+        }
     }
 }
 
 struct PlanetCollectionView_Previews: PreviewProvider {
     static var previews: some View {
         PlanetCollectionView()
+        
     }
 }
 
-func changePlanet() ->String{
-    
-    return "Sun"
-    
-}
+

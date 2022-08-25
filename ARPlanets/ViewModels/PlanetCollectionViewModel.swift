@@ -11,19 +11,24 @@ import Foundation
 class PlanetCollectionViewModel: ObservableObject{
     
     @Published var planet = Planets()
+    @Published var currentPlanetSelection: String?
+    @Published var arrayOfPlanets: [PlanetList] = [
+        PlanetList(name: "moon"),
+        PlanetList(name: "Earth Daytime"),
+        PlanetList(name: "Saturn"),
+        PlanetList(name: "Mars"),
+        PlanetList(name: "Venus"),
+        PlanetList(name: "Uranus"),
+        PlanetList(name: "Earth Nighttime"),
+        PlanetList(name: "Earth Clouds"),
+        PlanetList(name: "Jupiter"),
+        ]
     
     private let userDefaults = UserDefaults.standard
     
     
     //this is just ne testing setting the planet to see if its possible.
-    func setPlanet(){
-        var test = userDefaults.object(forKey: "currentPlanetSelection")
-        userDefaults.set("Sun", forKey: "currentPlanetSelection")
-        var test1 = userDefaults.object(forKey: "currentPlanetSelection")
-        print(test)
-        print(test1)
-        
+    func setPlanet(_ selectedPlanet: String){
+        userDefaults.set(selectedPlanet, forKey: "currentPlanetSelection")
     }
-    
-    
 }

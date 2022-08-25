@@ -10,8 +10,16 @@ import Foundation
 
 struct Keys{
     
-    struct PlanetKeys{
-        
-    }
+
 }
 
+struct PlanetKeys{
+
+    
+
+}
+
+struct PlanetList: Identifiable{
+    var name: String
+    var id = UUID()
+}
