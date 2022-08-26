@@ -17,12 +17,13 @@ struct PlanetCollectionViewCellUI: View {
     
 
     var body: some View {
-        ZStack{
+
+            
         RoundedRectangle(cornerRadius: 8)
                 .frame(width: 100, height: 100).foregroundColor(Color.cyan)
             
             Text("\(name)").font(.largeTitle).foregroundColor(.white)
-        }
+         
         
     }
 }

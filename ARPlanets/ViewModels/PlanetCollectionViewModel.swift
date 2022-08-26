@@ -30,5 +30,6 @@ class PlanetCollectionViewModel: ObservableObject{
     //this is just ne testing setting the planet to see if its possible.
     func setPlanet(_ selectedPlanet: String){
         userDefaults.set(selectedPlanet, forKey: "currentPlanetSelection")
+        print(userDefaults.object(forKey: "currentPlanetSelection"))
     }
 }

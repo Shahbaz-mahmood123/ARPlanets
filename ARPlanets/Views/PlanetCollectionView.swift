@@ -10,15 +10,21 @@ import SwiftUI
 struct PlanetCollectionView: View {
     
     @ObservedObject var vm = PlanetCollectionViewModel()
-
+    
     var body: some View {
-        
-        ScrollView{
-            ForEach(vm.arrayOfPlanets, id: \.id){ planet in
-                HStack{
-                    PlanetCollectionViewCellUI(name: planet.name, row: vm.arrayOfPlanets.count)
-                }.onTapGesture {
-                    vm.setPlanet(planet.name)
+        GeometryReader { gm in
+            
+            VStack{
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(vm.arrayOfPlanets, id: \.id){ planet in
+                            ZStack{
+                                PlanetCollectionViewCellUI(name: planet.name, row: vm.arrayOfPlanets.count)
+                            }.onTapGesture {
+                                vm.setPlanet(planet.name)
+                            }
+                        }
+                    }
                 }
             }
         }
