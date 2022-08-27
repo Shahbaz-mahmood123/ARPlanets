@@ -33,7 +33,7 @@ struct Planets {
             let sphere = SCNSphere(radius: planetRadius)
             print(planetRadius)
             material.diffuse.contents = planetBackgroundImage
-            
+                            
             sphere.materials = [material]
             return sphere
         }
@@ -64,6 +64,7 @@ struct Planets {
         let node = SCNNode()
         
         guard let newPlanet = createPlanet() else{ fatalError("unable to create planet")}
+        
         
         node.geometry = newPlanet
         node.position = SCNVector3(

@@ -12,11 +12,11 @@ struct PlanetCollectionView: View {
     @ObservedObject var vm = PlanetCollectionViewModel()
     
     var body: some View {
-        GeometryReader { gm in
-            
+        NavigationView{
             VStack{
+                Text("Select Your Planet")
                 ScrollView(.horizontal){
-                    HStack{
+                    HStack(alignment: .top){
                         ForEach(vm.arrayOfPlanets, id: \.id){ planet in
                             ZStack{
                                 PlanetCollectionViewCellUI(name: planet.name, row: vm.arrayOfPlanets.count)
@@ -26,9 +26,14 @@ struct PlanetCollectionView: View {
                         }
                     }
                 }
+                Spacer()
+                HStack{
+                    Text("test")
+                }
             }
-        }
+        }.navigationTitle("Selection Screen").font(.largeTitle)
     }
+    
 }
 
 struct PlanetCollectionView_Previews: PreviewProvider {

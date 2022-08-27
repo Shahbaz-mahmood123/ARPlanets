@@ -76,12 +76,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             if let hitResult = results.first {
                 
-                //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController. Sets the planet property on the Planet Class
+                //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController.
                 
                 if let currentPlanet = userDefaults.object(forKey: "currentPlanetSelection") as? String {
-                    
                     planetModel.currentPlanet = currentPlanet
-                }else{
+                } else {
                     userDefaults.set("Earth Daytime", forKey: "currentPlanetSelection")
                 }
                 let node = planetModel.createPlanetNode(atLocation: hitResult)
@@ -93,7 +92,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 node.runAction(
                     SCNAction.rotateBy(x: CGFloat(80), y: CGFloat(80), z: CGFloat(0.0), duration: 3600))
             }
-            
         }
     }
     
