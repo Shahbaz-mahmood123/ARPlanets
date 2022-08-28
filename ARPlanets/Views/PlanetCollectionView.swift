@@ -13,8 +13,14 @@ struct PlanetCollectionView: View {
     
     var body: some View {
         NavigationView{
+            ZStack{
+//                LinearGradient(gradient: Gradient(colors: [.blue, .red , .white]), startPoint: .topLeading, endPoint: .trailing)
+//                    .ignoresSafeArea()
+                RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: 10, endRadius: 200)
+                    .ignoresSafeArea()
+             
             VStack{
-                Text("Select Your Planet")
+                Text("Select a Planet").colorInvert()
                 ScrollView(.horizontal){
                     HStack(alignment: .top){
                         ForEach(vm.arrayOfPlanets, id: \.id){ planet in
@@ -28,10 +34,16 @@ struct PlanetCollectionView: View {
                 }
                 Spacer()
                 HStack{
-                    Text("test")
+                    Text("test").colorInvert()
                 }
+                
             }
+
+                    
+            }
+            
         }.navigationTitle("Selection Screen").font(.largeTitle)
+            
     }
     
 }

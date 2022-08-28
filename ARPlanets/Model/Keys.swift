@@ -23,3 +23,9 @@ struct PlanetList: Identifiable{
     var name: String
     var id = UUID()
 }
+
+
+struct UserDefaultKeys{
+    
+    var currentPlanetSelectionDefault = "currentPlanetSelection"
+}

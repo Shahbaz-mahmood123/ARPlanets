@@ -134,6 +134,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
+    // TODO: these two functions need to be moved to the model
     func removeLastPlanet(){
         let planetsWithIndex = planetArray.enumerated()
         if !planetArray.isEmpty{
