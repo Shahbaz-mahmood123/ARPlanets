@@ -10,13 +10,23 @@ import ARKit
 
 
 class PlanetTests: XCTestCase{
+    private var planets = Planets()
     
     func test_planet_creation_should_return_SCNSphere(){
-        var planets = Planets()
         
         if let sphere = planets.createPlanet(){
             XCTAssertTrue(sphere is SCNSphere)
         }
     }
+
+    func test_creating_planet_node_should_return_SCNNode(){
+    }
     
+    func test_should_set_radius_for_planet(){
+        
+    }
+    
+    func test_should_set_radius_for_a_planet(){
+        
+    }
 }

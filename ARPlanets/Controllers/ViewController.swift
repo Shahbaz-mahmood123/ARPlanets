@@ -77,7 +77,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if let hitResult = results.first {
                 
                 //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController.
-                
                 if let currentPlanet = userDefaults.object(forKey: "currentPlanetSelection") as? String {
                     planetModel.currentPlanet = currentPlanet
                 } else {

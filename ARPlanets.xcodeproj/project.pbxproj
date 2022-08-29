@@ -14,6 +14,7 @@
 		D590FE3628BC0A8E002ACCA6 /* ARPlanetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE3528BC0A8E002ACCA6 /* ARPlanetsTests.swift */; };
 		D590FE3D28BC0AA3002ACCA6 /* PlanetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE3C28BC0AA3002ACCA6 /* PlanetTests.swift */; };
 		D590FE3E28BC1202002ACCA6 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC269C28A70BC700CEE78D /* Planets.swift */; };
+		D590FE4028BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE3F28BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift */; };
 		D5AC268728A56F6E00CEE78D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC268628A56F6E00CEE78D /* AppDelegate.swift */; };
 		D5AC268928A56F6E00CEE78D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AC268828A56F6E00CEE78D /* art.scnassets */; };
 		D5AC268B28A56F6E00CEE78D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC268A28A56F6E00CEE78D /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		D590FE3328BC0A8E002ACCA6 /* ARDiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D590FE3528BC0A8E002ACCA6 /* ARPlanetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlanetsTests.swift; sourceTree = "<group>"; };
 		D590FE3C28BC0AA3002ACCA6 /* PlanetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTests.swift; sourceTree = "<group>"; };
+		D590FE3F28BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewModelTests.swift; sourceTree = "<group>"; };
 		D5AC268328A56F6E00CEE78D /* ARDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AC268628A56F6E00CEE78D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5AC268828A56F6E00CEE78D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				D590FE3528BC0A8E002ACCA6 /* ARPlanetsTests.swift */,
 				D590FE3C28BC0AA3002ACCA6 /* PlanetTests.swift */,
+				D590FE3F28BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift */,
 			);
 			path = ARPlanetsTests;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				D590FE3628BC0A8E002ACCA6 /* ARPlanetsTests.swift in Sources */,
 				D590FE3D28BC0AA3002ACCA6 /* PlanetTests.swift in Sources */,
+				D590FE4028BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift in Sources */,
 				D590FE3E28BC1202002ACCA6 /* Planets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
