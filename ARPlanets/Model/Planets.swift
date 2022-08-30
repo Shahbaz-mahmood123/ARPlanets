@@ -45,10 +45,26 @@ struct Planets {
         switch currentPlanet {
         case "moon":
             radius = 0.01
-        case "earth":
+        case "Earth Daytime":
            radius = 0.05
         case "Sun":
+            radius = 0.5
+        case "Earth Night":
+            radius = 0.05
+        case "Neptune":
+            radius = 0.03
+        case "Saturn":
             radius = 0.1
+        case "Uranus":
+            radius = 0.08
+        case "Venus":
+            radius = 0.03
+        case "Mars":
+            radius = 0.04
+        case "Juptier":
+            radius = 0.09
+        case "Earth Clouds":
+            radius = 0.05
         default: radius = 0.05
         }
     }

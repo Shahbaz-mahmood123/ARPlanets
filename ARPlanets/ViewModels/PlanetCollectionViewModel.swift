@@ -19,9 +19,11 @@ class PlanetCollectionViewModel: ObservableObject{
         PlanetList(name: "Mars"),
         PlanetList(name: "Venus"),
         PlanetList(name: "Uranus"),
-        PlanetList(name: "Earth Nighttime"),
+        PlanetList(name: "Earth Night"),
         PlanetList(name: "Earth Clouds"),
         PlanetList(name: "Jupiter"),
+        PlanetList(name: "Uranus"),
+        PlanetList(name: "Sun"),
         ]
     
     private let userDefaults = UserDefaults.standard
