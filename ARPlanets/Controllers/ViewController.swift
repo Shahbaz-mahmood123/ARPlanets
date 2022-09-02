@@ -86,10 +86,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
                 planetArray.append(node)
                 
+
+                
                 sceneView.scene.rootNode.addChildNode(node)
                 
-                node.runAction(
-                    SCNAction.rotateBy(x: CGFloat(80), y: CGFloat(80), z: CGFloat(0.0), duration: 3600))
+
             }
         }
     }

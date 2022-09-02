@@ -16,8 +16,8 @@ struct PlanetCollectionView: View {
             ZStack{
 //                LinearGradient(gradient: Gradient(colors: [.blue, .red , .white]), startPoint: .topLeading, endPoint: .trailing)
 //                    .ignoresSafeArea()
-                RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: 10, endRadius: 200)
-                    .ignoresSafeArea()
+//                RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: 10, endRadius: 200)
+//                    .ignoresSafeArea()
              
             VStack{
                 Text("Select a Planet").colorInvert()
@@ -29,6 +29,7 @@ struct PlanetCollectionView: View {
                             }.onTapGesture {
                                 vm.setPlanet(planet.name)
                             }
+                            
                         }
                     }
                 }

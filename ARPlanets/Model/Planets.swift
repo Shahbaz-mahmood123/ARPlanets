@@ -10,10 +10,9 @@ import SceneKit
 import ARKit
 
 
-struct Planets {
+class Planets {
     
     var currentPlanet: String = "moon"
-    
     private var radius: CGFloat?
     private let material = SCNMaterial()
     private var planetBackgroundImage:UIImage {
@@ -27,7 +26,7 @@ struct Planets {
 
     //creates sphere to be used to create planets
     //@Returns -> SCNSphere object to be used to assign to a node and create a planet
-    mutating func createPlanet() -> SCNSphere? {
+    func createPlanet() -> SCNSphere? {
         setRadius()
         if let planetRadius = radius {
             let sphere = SCNSphere(radius: planetRadius)
@@ -41,7 +40,7 @@ struct Planets {
         return nil
     }
     //Maybe this could be a computed property?
-    mutating func setRadius(){
+    func setRadius(){
         switch currentPlanet {
         case "moon":
             radius = 0.01
@@ -69,14 +68,18 @@ struct Planets {
         }
     }
     
-    //put the roation of the node here
-    mutating func rotation(){
-        
+    //Implement logic fo setting planet rotation per planet here.
+    func setRotation() -> [String: CGFloat]{
+    
+        return ["x": 80, "y":80, "z":0.0, "duration": 3600]
     }
+    
+    
+    //put the roation of the node here
     // creates the node and adds the position based of the users results
     //@Parameters:ARRaycastResult, this is so we can set the x, y and z value before placing the image
     //@Returns SCNode object to be used in VC
-    mutating func createPlanetNode(atLocation location: ARRaycastResult) -> SCNNode {
+    func createPlanetNode(atLocation location: ARRaycastResult) -> SCNNode {
         let node = SCNNode()
         
         guard let newPlanet = createPlanet() else{ fatalError("unable to create planet")}
@@ -88,6 +91,15 @@ struct Planets {
             y: location.worldTransform.columns.3.y + newPlanet.boundingSphere.radius,
             z: location.worldTransform.columns.3.z)
         
+        let planetRotation = setRotation()
+        
+        var x = planetRotation["x"]!
+        var y = planetRotation["y"]!
+        var z = planetRotation["z"]!
+        var duration = planetRotation["duration"]!
+        
+        node.runAction(
+            SCNAction.rotateBy(x: x , y: y, z: z, duration: duration))
         //planetArray.append(node)
         return node
     }
