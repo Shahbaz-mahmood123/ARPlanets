@@ -14,10 +14,6 @@ struct PlanetCollectionView: View {
     var body: some View {
         NavigationView{
             ZStack{
-//                LinearGradient(gradient: Gradient(colors: [.blue, .red , .white]), startPoint: .topLeading, endPoint: .trailing)
-//                    .ignoresSafeArea()
-//                RadialGradient(gradient: Gradient(colors: [.white, .black]), center: .center, startRadius: 10, endRadius: 200)
-//                    .ignoresSafeArea()
              
             VStack{
                 Text("Select a Planet").colorInvert()
@@ -25,11 +21,8 @@ struct PlanetCollectionView: View {
                     HStack(alignment: .top){
                         ForEach(vm.arrayOfPlanets, id: \.id){ planet in
                             ZStack{
-                                PlanetCollectionViewCellUI(name: planet.name, row: vm.arrayOfPlanets.count)
-                            }.onTapGesture {
-                                vm.setPlanet(planet.name)
-                            }
-                            
+                                PlanetCollectionViewCellUI(name: planet.name)
+                            }                            
                         }
                     }
                 }

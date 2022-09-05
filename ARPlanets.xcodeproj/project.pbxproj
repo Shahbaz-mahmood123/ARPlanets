@@ -91,6 +91,13 @@
 			path = ARPlanetsTests;
 			sourceTree = "<group>";
 		};
+		D590FE6128C68446002ACCA6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		D5AC267A28A56F6E00CEE78D = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +119,7 @@
 		D5AC268528A56F6E00CEE78D /* ARPlanets */ = {
 			isa = PBXGroup;
 			children = (
+				D590FE6128C68446002ACCA6 /* Constants */,
 				D590FE0928B6CEBF002ACCA6 /* ViewModels */,
 				D5AC268628A56F6E00CEE78D /* AppDelegate.swift */,
 				D5AC269B28A70BB900CEE78D /* Model */,

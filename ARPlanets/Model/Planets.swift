@@ -17,7 +17,7 @@ class Planets {
     private let material = SCNMaterial()
     private var planetBackgroundImage:UIImage {
         get{
-            //This is to so we can return the correct asset based of the users selection. currentplanet should be update in VC
+            //This is to so we can return the correct asset based of the users selection. currentplanet should be updated in VC
             return UIImage(named: "art.scnassets/\(currentPlanet).jpeg")!
         }
         
@@ -30,10 +30,9 @@ class Planets {
         setRadius()
         if let planetRadius = radius {
             let sphere = SCNSphere(radius: planetRadius)
-            print(planetRadius)
             material.diffuse.contents = planetBackgroundImage
-                            
             sphere.materials = [material]
+            
             return sphere
         }
         
