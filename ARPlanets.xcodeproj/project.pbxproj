@@ -16,6 +16,8 @@
 		D590FE3E28BC1202002ACCA6 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC269C28A70BC700CEE78D /* Planets.swift */; };
 		D590FE4028BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE3F28BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift */; };
 		D590FE6028C1471F002ACCA6 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE5F28C1471F002ACCA6 /* Sun.swift */; };
+		D590FE6428C686FE002ACCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE6228C685EB002ACCA6 /* Constants.swift */; };
+		D590FE6528C68700002ACCA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE6228C685EB002ACCA6 /* Constants.swift */; };
 		D5AC268728A56F6E00CEE78D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC268628A56F6E00CEE78D /* AppDelegate.swift */; };
 		D5AC268928A56F6E00CEE78D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D5AC268828A56F6E00CEE78D /* art.scnassets */; };
 		D5AC268B28A56F6E00CEE78D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC268A28A56F6E00CEE78D /* ViewController.swift */; };
@@ -45,6 +47,7 @@
 		D590FE3C28BC0AA3002ACCA6 /* PlanetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTests.swift; sourceTree = "<group>"; };
 		D590FE3F28BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewModelTests.swift; sourceTree = "<group>"; };
 		D590FE5F28C1471F002ACCA6 /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		D590FE6228C685EB002ACCA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D5AC268328A56F6E00CEE78D /* ARDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AC268628A56F6E00CEE78D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5AC268828A56F6E00CEE78D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		D590FE6128C68446002ACCA6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				D590FE6228C685EB002ACCA6 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -267,6 +271,7 @@
 				D590FE3D28BC0AA3002ACCA6 /* PlanetTests.swift in Sources */,
 				D590FE4028BC1B2C002ACCA6 /* PlanetCollectionViewModelTests.swift in Sources */,
 				D590FE3E28BC1202002ACCA6 /* Planets.swift in Sources */,
+				D590FE6528C68700002ACCA6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +286,7 @@
 				D5AC269D28A70BC700CEE78D /* Planets.swift in Sources */,
 				D590FE0B28B6CED2002ACCA6 /* PlanetCollectionViewModel.swift in Sources */,
 				D590FE0828B6CA10002ACCA6 /* PlanetCollectionView.swift in Sources */,
+				D590FE6428C686FE002ACCA6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

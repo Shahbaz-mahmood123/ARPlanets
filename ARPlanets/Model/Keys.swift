@@ -25,7 +25,3 @@ struct PlanetList: Identifiable{
 }
 
 
-struct UserDefaultKeys{
-    
-    var currentPlanetSelectionDefault = "currentPlanetSelection"
-}
