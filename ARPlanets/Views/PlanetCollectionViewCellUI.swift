@@ -21,8 +21,9 @@ struct PlanetCollectionViewCellUI: View {
             Text("\(name)").font(.largeTitle).foregroundColor(.white)
         }.onTapGesture {
             vm.setPlanet(name)
-            vm.setColorForCell(isHiglighted)
+            //order is important here for setting the field to highlighted
             isHiglighted = !isHiglighted
+            vm.setColorForCell(isHiglighted)
         }
     }
 }

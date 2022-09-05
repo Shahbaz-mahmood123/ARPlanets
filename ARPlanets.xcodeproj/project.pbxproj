@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D590FE0628B42442002ACCA6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE0528B42442002ACCA6 /* Keys.swift */; };
+		D590FE0628B42442002ACCA6 /* PlanetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE0528B42442002ACCA6 /* PlanetDTO.swift */; };
 		D590FE0828B6CA10002ACCA6 /* PlanetCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE0728B6CA10002ACCA6 /* PlanetCollectionView.swift */; };
 		D590FE0B28B6CED2002ACCA6 /* PlanetCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE0A28B6CED2002ACCA6 /* PlanetCollectionViewModel.swift */; };
 		D590FE0F28B81938002ACCA6 /* PlanetCollectionViewCellUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590FE0E28B81938002ACCA6 /* PlanetCollectionViewCellUI.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D590FE0528B42442002ACCA6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		D590FE0528B42442002ACCA6 /* PlanetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDTO.swift; sourceTree = "<group>"; };
 		D590FE0728B6CA10002ACCA6 /* PlanetCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionView.swift; sourceTree = "<group>"; };
 		D590FE0A28B6CED2002ACCA6 /* PlanetCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewModel.swift; sourceTree = "<group>"; };
 		D590FE0E28B81938002ACCA6 /* PlanetCollectionViewCellUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCellUI.swift; sourceTree = "<group>"; };
@@ -102,6 +102,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D590FE6628C6B5E5002ACCA6 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				D590FE0528B42442002ACCA6 /* PlanetDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
 		D5AC267A28A56F6E00CEE78D = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +131,7 @@
 		D5AC268528A56F6E00CEE78D /* ARPlanets */ = {
 			isa = PBXGroup;
 			children = (
+				D590FE6628C6B5E5002ACCA6 /* DTOs */,
 				D590FE6128C68446002ACCA6 /* Constants */,
 				D590FE0928B6CEBF002ACCA6 /* ViewModels */,
 				D5AC268628A56F6E00CEE78D /* AppDelegate.swift */,
@@ -158,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				D5AC269C28A70BC700CEE78D /* Planets.swift */,
-				D590FE0528B42442002ACCA6 /* Keys.swift */,
 				D590FE5F28C1471F002ACCA6 /* Sun.swift */,
 			);
 			path = Model;
@@ -281,7 +289,7 @@
 			files = (
 				D590FE0F28B81938002ACCA6 /* PlanetCollectionViewCellUI.swift in Sources */,
 				D5AC268B28A56F6E00CEE78D /* ViewController.swift in Sources */,
-				D590FE0628B42442002ACCA6 /* Keys.swift in Sources */,
+				D590FE0628B42442002ACCA6 /* PlanetDTO.swift in Sources */,
 				D5AC268728A56F6E00CEE78D /* AppDelegate.swift in Sources */,
 				D5AC269D28A70BC700CEE78D /* Planets.swift in Sources */,
 				D590FE0B28B6CED2002ACCA6 /* PlanetCollectionViewModel.swift in Sources */,
