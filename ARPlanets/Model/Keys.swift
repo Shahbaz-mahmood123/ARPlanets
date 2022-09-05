@@ -14,9 +14,6 @@ struct Keys{
 }
 
 struct PlanetKeys{
-
-    
-
 }
 
 struct PlanetList: Identifiable{

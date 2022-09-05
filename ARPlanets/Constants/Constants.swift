@@ -9,6 +9,8 @@ import Foundation
 
 
 struct UserDefaultsConstants{
-    var currentPlanetSelection = "currentPlanetSelection"
+    
+    static let currentPlanetSelection = "currentPlanetSelection"
 }
  
+

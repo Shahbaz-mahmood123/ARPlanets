@@ -19,8 +19,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private let userDefaults = UserDefaults.standard
     
     private let swiftUIController = UIHostingController(rootView: PlanetCollectionView())
-    
-    let userDefaultsConstants = UserDefaultsConstants()
+
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,10 +70,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if let hitResult = results.first {
                 
                 //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController.
-                if let currentPlanet = userDefaults.object(forKey: userDefaultsConstants.currentPlanetSelection) as? String {
+                if let currentPlanet = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as? String {
                     planetModel.currentPlanet = currentPlanet
                 } else {
-                    userDefaults.set("Earth Daytime", forKey: userDefaultsConstants.currentPlanetSelection)
+                    userDefaults.set("Earth Daytime", forKey: UserDefaultsConstants.currentPlanetSelection)
                 }
                 let node = planetModel.createPlanetNode(atLocation: hitResult)
                 

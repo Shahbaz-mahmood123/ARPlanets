@@ -13,7 +13,7 @@ import ARKit
 class Planets {
     
     var currentPlanet: String = "moon"
-    private var radius: CGFloat?
+    var radius: CGFloat?
     private let material = SCNMaterial()
     private var planetBackgroundImage:UIImage {
         get{
@@ -92,10 +92,10 @@ class Planets {
         
         let planetRotation = setRotation()
         
-        var x = planetRotation["x"]!
-        var y = planetRotation["y"]!
-        var z = planetRotation["z"]!
-        var duration = planetRotation["duration"]!
+        let x = planetRotation["x"]!
+        let y = planetRotation["y"]!
+        let z = planetRotation["z"]!
+        let duration = planetRotation["duration"]!
         
         node.runAction(
             SCNAction.rotateBy(x: x , y: y, z: z, duration: duration))

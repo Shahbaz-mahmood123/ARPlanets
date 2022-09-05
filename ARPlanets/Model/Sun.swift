@@ -10,6 +10,4 @@ import Foundation
 
 class Sun: Planets {
     
-    
-    var rotation = 
 }
