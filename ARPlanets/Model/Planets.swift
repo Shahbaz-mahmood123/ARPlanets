@@ -8,6 +8,7 @@
 import Foundation
 import SceneKit
 import ARKit
+import SwiftUI
 
 
 class Planets {
@@ -22,6 +23,19 @@ class Planets {
         }
         
     }
+    
+    private var arrayOfPlanets: [PlanetList] = [
+        PlanetList(name: "moon", radius: 0.01, rotation:Rotation(x: 5, y:360, z:0.0, duration: 1000000000000)),
+        PlanetList(name: "Earth Daytime", radius: 0.05, rotation:Rotation(x: 60, y:60, z:0.0, duration: 3600)),
+        PlanetList(name: "Saturn", radius: 0.2, rotation:Rotation(x: 10, y:40, z:0.0, duration: 3600)),
+        PlanetList(name: "Mars", radius: 0.004, rotation:Rotation(x: 10, y:65, z:0.0, duration: 3600)),
+        PlanetList(name: "Venus", radius: 0.03, rotation:Rotation(x: 10, y:80, z:0.0, duration: 3600)),
+        PlanetList(name: "Uranus", radius: 0.2, rotation:Rotation(x: 10, y:70, z:0.0, duration: 3600)),
+        PlanetList(name: "Earth Night", radius: 0.05, rotation:Rotation(x: 10, y:80, z:0.0, duration: 3600)),
+        PlanetList(name: "Earth Clouds", radius: 0.05, rotation:Rotation(x: 10, y:80, z:0.0, duration: 3600)),
+        PlanetList(name: "Jupiter", radius: 0.3, rotation:Rotation(x: 10, y:60, z:0.0, duration: 3600)),
+        PlanetList(name: "Sun", radius: 0.5, rotation:Rotation(x: 10, y:30, z:0.0, duration: 3600)),
+        ]
     
 
     //creates sphere to be used to create planets
@@ -67,9 +81,16 @@ class Planets {
         }
     }
     
-    //Implement logic fo setting planet rotation per planet here.
-    func setRotation() -> [String: CGFloat]{
-    
+    func setRotation() -> [String: CGFloat]?{
+        
+        //TODO: not sure why the rotation is not working correctly, its going to fast and not rotating in the right dirction. 
+        
+//        for planet in arrayOfPlanets {
+//            if planet.name == currentPlanet {
+//                return ["x": CGFloat(planet.rotation.x), "y": CGFloat(planet.rotation.x), "z":CGFloat(planet.rotation.x), "duration": CGFloat(planet.rotation.x)]
+//            }
+//        }
+        
         return ["x": 80, "y":80, "z":0.0, "duration": 3600]
     }
     
@@ -90,7 +111,7 @@ class Planets {
             y: location.worldTransform.columns.3.y + newPlanet.boundingSphere.radius,
             z: location.worldTransform.columns.3.z)
         
-        let planetRotation = setRotation()
+        if let planetRotation = setRotation() {
         
         let x = planetRotation["x"]!
         let y = planetRotation["y"]!
@@ -99,6 +120,7 @@ class Planets {
         
         node.runAction(
             SCNAction.rotateBy(x: x , y: y, z: z, duration: duration))
+        }
         //planetArray.append(node)
         return node
     }

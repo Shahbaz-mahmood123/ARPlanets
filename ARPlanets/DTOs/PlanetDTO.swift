@@ -9,8 +9,18 @@ import Foundation
 
 
 struct PlanetList: Identifiable{
-    var name: String
-    var id = UUID()
+    let name: String
+    let id = UUID()
+    let radius: Double
+    let rotation: Rotation
 }
+
+struct Rotation {
+    let x: Float
+    let y: Float
+    let z: Float
+    let duration: Float
+}
+
 
 
