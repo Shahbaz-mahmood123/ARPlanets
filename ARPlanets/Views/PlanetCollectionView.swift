@@ -10,13 +10,16 @@ import SwiftUI
 struct PlanetCollectionView: View {
     
     @ObservedObject var vm = PlanetCollectionViewModel()
+    @State var isHiglighted = false
+    @State var currentPlanetText = ""
     
     var body: some View {
         NavigationView{
             ZStack{
                 VStack{
-                    Text("Select a Planet").colorInvert()
+                    Text(currentPlanetText ?? "Choose a Planet")
                     ScrollView(.horizontal){
+                        
                         HStack(alignment: .top){
                             ForEach(vm.arrayOfPlanets, id: \.id){ planet in
                                 ZStack{

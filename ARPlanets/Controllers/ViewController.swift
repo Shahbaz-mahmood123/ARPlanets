@@ -47,13 +47,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Pause the view's session
         sceneView.session.pause()
     }
@@ -78,12 +75,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 let node = planetModel.createPlanetNode(atLocation: hitResult)
                 
                 planetArray.append(node)
-                
-
-                
                 sceneView.scene.rootNode.addChildNode(node)
-                
-
             }
         }
     }
@@ -96,7 +88,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let planeNode = createPlane(withPlaneAnchor: planeAnchor)
         
         node.addChildNode(planeNode)
-        
     }
     
     func createPlane(withPlaneAnchor planeAnchor: ARPlaneAnchor) -> SCNNode{
@@ -124,7 +115,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     @IBAction func removeLastObject(_ sender: UIBarButtonItem) {
         removeLastPlanet()
-        
     }
     
 
@@ -147,8 +137,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
-    
-    
 }
   
 

@@ -10,7 +10,6 @@ import SwiftUI
 struct PlanetCollectionViewCellUI: View {
     @State var name: String = ""
     @ObservedObject var vm = PlanetCollectionViewModel()
-    @State var isHiglighted = false
     //@State var currentColor = Color.cyan
     private let width = (UIScreen.main.bounds.width/3)-20
     
@@ -22,8 +21,8 @@ struct PlanetCollectionViewCellUI: View {
         }.onTapGesture {
             vm.setPlanet(name)
             //order is important here for setting the field to highlighted
-            isHiglighted = !isHiglighted
-            vm.setColorForCell(isHiglighted)
+            vm.isHiglighted = !vm.isHiglighted
+            vm.setColorForCell(vm.isHiglighted)
         }
     }
 }

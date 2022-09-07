@@ -12,7 +12,7 @@ import SwiftUI
 class PlanetCollectionViewModel: ObservableObject{
     
     @Published var planet = Planets()
-    @Published var currentPlanetSelection: String?
+    @Published var currentPlanetSelection: String
     @Published var cellcolor : Color? 
     @Published var arrayOfPlanets: [PlanetList] = [
         PlanetList(name: "moon", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
@@ -26,9 +26,14 @@ class PlanetCollectionViewModel: ObservableObject{
         PlanetList(name: "Jupiter", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Sun", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         ]
+    @Published var isHiglighted = false
     
     private let userDefaults = UserDefaults.standard
     
+    
+    init(){
+        currentPlanetSelection = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+    }
     
     //this is just ne testing setting the planet to see if its possible.
     func setPlanet(_ selectedPlanet: String){
@@ -41,5 +46,9 @@ class PlanetCollectionViewModel: ObservableObject{
         } else {
             cellcolor =  Color.cyan
         }
+    }
+    
+    func updateCurrentPlanetText() -> String{
+        return userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
     }
 }
