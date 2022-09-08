@@ -100,7 +100,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let gridMaterial = SCNMaterial()
         
-        gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/grid.png")
+        gridMaterial.diffuse.contents = UIImage(named: "art.scnassets/MilkyWay.jpeg")
         
         plane.materials = [gridMaterial]
         

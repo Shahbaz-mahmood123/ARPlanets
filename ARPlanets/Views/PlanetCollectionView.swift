@@ -17,10 +17,11 @@ struct PlanetCollectionView: View {
         NavigationView{
             ZStack{
                 VStack{
-                    Text(currentPlanetText ?? "Choose a Planet")
+                    //currentPlanetText ?? "Choose a Planet" need to
+                    // update text on planet selection
+                    Text("Choose a Planet")
                     ScrollView(.horizontal){
-                        
-                        HStack(alignment: .top){
+                        HStack(alignment: .top){    
                             ForEach(vm.arrayOfPlanets, id: \.id){ planet in
                                 ZStack{
                                     PlanetCollectionViewCellUI(name: planet.name)
@@ -28,10 +29,11 @@ struct PlanetCollectionView: View {
                             }
                         }
                     }
-                    Spacer()
+                    
                     HStack{
-                        Text("test").colorInvert()
-                    }
+                        Text("Another Section")
+                    }.padding()
+                    Spacer()
                 }
             }
             

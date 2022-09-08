@@ -17,6 +17,7 @@ struct PlanetCollectionViewCellUI: View {
         ZStack{
         RoundedRectangle(cornerRadius: 8)
                 .frame(width: 220, height: 200).foregroundColor(vm.cellcolor ?? Color.cyan)
+            
             Text("\(name)").font(.largeTitle).foregroundColor(.white)
         }.onTapGesture {
             vm.setPlanet(name)
@@ -24,6 +25,9 @@ struct PlanetCollectionViewCellUI: View {
             vm.isHiglighted = !vm.isHiglighted
             vm.setColorForCell(vm.isHiglighted)
         }
+        .background(
+//            Image(uiImage: UIImage(named: "art.scnassets/MilkyWay.jpeg")!)
+        )
     }
 }
 
