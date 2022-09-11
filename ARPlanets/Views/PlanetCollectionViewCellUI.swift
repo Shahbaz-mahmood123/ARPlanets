@@ -14,6 +14,7 @@ struct PlanetCollectionViewCellUI: View {
     private let width = (UIScreen.main.bounds.width/3)-20
     
     var body: some View {
+        VStack{
         ZStack{
             
                         Image("Moon")
@@ -23,12 +24,14 @@ struct PlanetCollectionViewCellUI: View {
                         RoundedRectangle(cornerRadius: 40)
                                     .frame(width: 200, height: 200).foregroundColor(vm.cellcolor ?? Color.black)
                     }
-                        Text("\(name)").font(.largeTitle).foregroundColor(.white)
+                        
         }.onTapGesture {
             vm.setPlanet(name)
             //order is important here for setting the field to highlighted
             vm.isHiglighted = !vm.isHiglighted
             vm.setColorForCell(vm.isHiglighted)
+        }
+            Text("\(name)").font(.largeTitle).foregroundColor(Color.red)
         }
 
     }

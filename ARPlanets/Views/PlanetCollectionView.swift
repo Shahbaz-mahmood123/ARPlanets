@@ -15,17 +15,22 @@ struct PlanetCollectionView: View {
     
     var body: some View {
         NavigationView{
+            
+           
             ZStack{
+//                Circle().fill(.white)
+//                    .blur(radius: 100)
+//                    .offset(x: 5, y: 20)
                 VStack{
                     //currentPlanetText ?? "Choose a Planet" need to
                     // update text on planet selection
-                    Text("Choose a Planet")
+                    Text("Select a Planet")
                     ScrollView(.horizontal){
                         HStack(alignment: .top){    
                             ForEach(vm.arrayOfPlanets, id: \.id){ planet in
                                 ZStack{
-                                    PlanetCollectionViewCellUI(name: planet.name)
-                                }.padding()
+                                    PlanetCollectionViewCellUI(name: planet.name).padding(.horizontal, 10)
+                                }
                             }
                         }
                     }
@@ -38,6 +43,7 @@ struct PlanetCollectionView: View {
                 }
                 
             }.frame( maxWidth: .infinity, maxHeight: .infinity).background(Color("BackgroundColor1"))
+            
 
         }.navigationTitle("Selection Screen").font(.largeTitle)
             
