@@ -25,13 +25,12 @@ struct PlanetCollectionView: View {
                             ForEach(vm.arrayOfPlanets, id: \.id){ planet in
                                 ZStack{
                                     PlanetCollectionViewCellUI(name: planet.name)
-                                }
+                                }.padding()
                             }
                         }
                     }
-                    
                     HStack{
-                        Text("Another Section")
+                        Text("ThisAnother Section").colorInvert()
                     }.padding()
                     Spacer()
                 }.background{

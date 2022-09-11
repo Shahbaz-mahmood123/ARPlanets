@@ -15,10 +15,15 @@ struct PlanetCollectionViewCellUI: View {
     
     var body: some View {
         ZStack{
-        RoundedRectangle(cornerRadius: 8)
-                .frame(width: 220, height: 200).foregroundColor(vm.cellcolor ?? Color.cyan)
             
-            Text("\(name)").font(.largeTitle).foregroundColor(.white)
+                        Image("Moon")
+                    .aspectRatio(contentMode: .fit)
+                    .rotationEffect(.init(degrees: -2))
+                    .background{
+                        RoundedRectangle(cornerRadius: 40)
+                                    .frame(width: 200, height: 200).foregroundColor(vm.cellcolor ?? Color.black)
+                    }
+                        Text("\(name)").font(.largeTitle).foregroundColor(.white)
         }.onTapGesture {
             vm.setPlanet(name)
             //order is important here for setting the field to highlighted
