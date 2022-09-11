@@ -34,10 +34,14 @@ struct PlanetCollectionView: View {
                         Text("Another Section")
                     }.padding()
                     Spacer()
+                }.background{
+                    CustomArcShape().ignoresSafeArea()
                 }
-            }
-            
+                
+            }.frame( maxWidth: .infinity, maxHeight: .infinity).background(Color("BackgroundColor1"))
+
         }.navigationTitle("Selection Screen").font(.largeTitle)
+            
     }
 }
 

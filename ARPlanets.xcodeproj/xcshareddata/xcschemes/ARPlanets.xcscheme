@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5AC268228A56F6E00CEE78D"
-               BuildableName = "ARDice.app"
-               BlueprintName = "ARDice"
+               BuildableName = "ARPlanets.app"
+               BlueprintName = "ARPlanets"
                ReferencedContainer = "container:ARPlanets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D590FE3228BC0A8E002ACCA6"
-               BuildableName = "ARDiceTests.xctest"
-               BlueprintName = "ARDiceTests"
+               BuildableName = "ARPlanetsTests.xctest"
+               BlueprintName = "ARPlanetsTests"
                ReferencedContainer = "container:ARPlanets.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5AC268228A56F6E00CEE78D"
-            BuildableName = "ARDice.app"
-            BlueprintName = "ARDice"
+            BuildableName = "ARPlanets.app"
+            BlueprintName = "ARPlanets"
             ReferencedContainer = "container:ARPlanets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,8 +73,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5AC268228A56F6E00CEE78D"
-            BuildableName = "ARDice.app"
-            BlueprintName = "ARDice"
+            BuildableName = "ARPlanets.app"
+            BlueprintName = "ARPlanets"
             ReferencedContainer = "container:ARPlanets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

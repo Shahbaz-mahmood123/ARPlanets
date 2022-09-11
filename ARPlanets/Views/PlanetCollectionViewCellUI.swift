@@ -25,9 +25,7 @@ struct PlanetCollectionViewCellUI: View {
             vm.isHiglighted = !vm.isHiglighted
             vm.setColorForCell(vm.isHiglighted)
         }
-        .background(
-//            Image(uiImage: UIImage(named: "art.scnassets/MilkyWay.jpeg")!)
-        )
+
     }
 }
 
