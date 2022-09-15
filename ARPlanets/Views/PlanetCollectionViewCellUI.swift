@@ -15,25 +15,25 @@ struct PlanetCollectionViewCellUI: View {
     
     var body: some View {
         VStack{
-        ZStack{
-            
-                        Image("Moon")
+            ZStack{
+                Image("moon")
                     .aspectRatio(contentMode: .fit)
                     .rotationEffect(.init(degrees: -2))
                     .background{
-                        RoundedRectangle(cornerRadius: 40)
-                                    .frame(width: 200, height: 200).foregroundColor(vm.cellcolor ?? Color.black)
+                        //should create a isHiglighted custom object that holds the planet name and bool for true or false to highlight the object
+//
+//                        RoundedRectangle(cornerRadius: 40)
+//                            .frame(width: 200, height: 200).foregroundColor(vm.cellcolor ?? Color.white)
                     }
-                        
-        }.onTapGesture {
-            vm.setPlanet(name)
-            //order is important here for setting the field to highlighted
-            vm.isHiglighted = !vm.isHiglighted
-            vm.setColorForCell(vm.isHiglighted)
-        }
+            }.onTapGesture {
+                vm.setPlanet(name)
+                //order is important here for setting the field to highlighted
+//                vm.isHiglighted = !vm.isHiglighted
+//                vm.setColorForCell(vm.isHiglighted)
+            }
             Text("\(name)").font(.largeTitle).foregroundColor(Color.red)
         }
-
+        
     }
 }
 

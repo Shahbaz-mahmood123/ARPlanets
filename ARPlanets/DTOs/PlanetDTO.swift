@@ -22,5 +22,8 @@ struct Rotation {
     let duration: Float
 }
 
-
+struct isFieldHighlighted {
+    var fieldName: String
+    var isHighlighted: Bool
+}
 

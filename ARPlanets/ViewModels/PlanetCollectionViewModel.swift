@@ -12,8 +12,9 @@ import SwiftUI
 class PlanetCollectionViewModel: ObservableObject{
     
     @Published var planet = Planets()
+    @Published var isHiglighted: isFieldHighlighted
     @Published var currentPlanetSelection: String
-    @Published var cellcolor : Color? 
+    @Published var cellcolor : Color?
     @Published var arrayOfPlanets: [PlanetList] = [
         PlanetList(name: "moon", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Earth Daytime", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
@@ -26,13 +27,13 @@ class PlanetCollectionViewModel: ObservableObject{
         PlanetList(name: "Jupiter", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Sun", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         ]
-    @Published var isHiglighted = false
-    
+
     private let userDefaults = UserDefaults.standard
-    
-    
+        
     init(){
-        currentPlanetSelection = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+        var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+        currentPlanetSelection = currentPlanetName
+        isHiglighted = isFieldHighlighted(fieldName: currentPlanetName, isHighlighted: true)
     }
     
     //this is just ne testing setting the planet to see if its possible.
@@ -41,6 +42,7 @@ class PlanetCollectionViewModel: ObservableObject{
     }
     //Probably should use userdefaults here to set the current planet as highlighted. 
     func setColorForCell(_ isHighlighted: Bool){
+        // unset currentplanet if one is selected
         if isHighlighted == true {
             cellcolor =  Color.red
         } else {
@@ -50,5 +52,20 @@ class PlanetCollectionViewModel: ObservableObject{
     
     func updateCurrentPlanetText() -> String{
         return userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+    }
+    
+    func setCellToHiglightedIfPlanetIsSelected(name: String){
+        //if same cell is selected set true to false
+        //if another cell is selected update userDefaults to new planet name and keep isHiglighted value as true
+        if isHiglighted.fieldName == name {
+            isHiglighted.isHighlighted = !isHiglighted.isHighlighted
+        }
+        
+        if isHiglighted.fieldName != name {
+            if isHiglighted.isHighlighted == false {
+                isHiglighted.isHighlighted = true
+            }
+            setPlanet(name)
+        }
     }
 }
