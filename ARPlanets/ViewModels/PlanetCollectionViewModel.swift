@@ -12,7 +12,7 @@ import SwiftUI
 class PlanetCollectionViewModel: ObservableObject{
     
     @Published var planet = Planets()
-    @Published var isHiglighted: isFieldHighlighted
+    @Published var isHiglighted: IsHiglighted
     @Published var currentPlanetSelection: String
     @Published var cellcolor : Color?
     @Published var arrayOfPlanets: [PlanetList] = [
@@ -26,21 +26,33 @@ class PlanetCollectionViewModel: ObservableObject{
         PlanetList(name: "Earth Clouds", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Jupiter", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Sun", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
-        ]
-
+    ]
+    
     private let userDefaults = UserDefaults.standard
-        
+    
     init(){
-        var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
-        currentPlanetSelection = currentPlanetName
-        isHiglighted = isFieldHighlighted(fieldName: currentPlanetName, isHighlighted: true)
+        
+        currentPlanetSelection = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+        //var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+        //this is really wonky I should probably add an extension to userDefaults for this maybe?
+        if let currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as? String {
+            currentPlanetSelection = currentPlanetName
+            isHiglighted = IsHiglighted(fieldName: currentPlanetName, isHighlighted: true)
+        } else {
+            userDefaults.set("Earth Daytime", forKey: UserDefaultsConstants.currentPlanetSelection)
+            var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+            currentPlanetSelection = currentPlanetName
+            isHiglighted = IsHiglighted(fieldName: currentPlanetName, isHighlighted: true)
+        }
+        //let currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+        //currentPlanetSelection = currentPlanetName
     }
     
     //this is just ne testing setting the planet to see if its possible.
     func setPlanet(_ selectedPlanet: String){
         userDefaults.set(selectedPlanet, forKey: UserDefaultsConstants.currentPlanetSelection)
     }
-    //Probably should use userdefaults here to set the current planet as highlighted. 
+    //Probably should use userdefaults here to set the current planet as highlighted.
     func setColorForCell(_ isHighlighted: Bool){
         // unset currentplanet if one is selected
         if isHighlighted == true {
@@ -53,6 +65,7 @@ class PlanetCollectionViewModel: ObservableObject{
     func updateCurrentPlanetText() -> String{
         return userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
     }
+    
     
     func setCellToHiglightedIfPlanetIsSelected(name: String){
         //if same cell is selected set true to false
@@ -67,5 +80,17 @@ class PlanetCollectionViewModel: ObservableObject{
             }
             setPlanet(name)
         }
+        //    func setCellToHiglightedIfPlanetIsSelected(planetName: String){
+        //        //if same cell is selected set true to false
+        //        //if another cell is selected update userDefaults to new planet name and keep isHiglighted value as true
+        ////        if isHiglighted.fieldName == planetName {
+        ////            isHiglighted.isHighlighted = !isHiglighted.isHighlighted
+        ////        }
+        ////        if isHiglighted.fieldName != planetName {
+        ////                isHiglighted.isHighlighted = true
+        ////                isHiglighted.fieldName = planetName
+        ////            setPlanet(planetName)
+        ////        }
+        //
     }
 }

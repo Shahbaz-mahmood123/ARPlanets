@@ -19,7 +19,8 @@ struct PlanetCollectionView: View {
                 VStack{
                     //currentPlanetText ?? "Choose a Planet" need to
                     // update text on planet selection
-                    Text("Select a Planet").colorInvert()
+
+                    Text("Select a Planet").foregroundColor(Color.white)
                     ScrollView(.horizontal){
                         HStack(alignment: .top){    
                             ForEach(vm.arrayOfPlanets, id: \.id){ planet in
@@ -32,16 +33,14 @@ struct PlanetCollectionView: View {
                         RoundedRectangle(cornerRadius: 10).foregroundColor(Color.black)
                     }
                     HStack{
-                        Text("This is Another Section").colorInvert()
+
+               Text("This is Another Section").foregroundColor(Color.white)
                     }.padding()
                     Spacer()
                 }.background{
                     Image("Background")
-
-                }
-                
+                 }
             }.frame( maxWidth: .infinity, maxHeight: .infinity).background(Color.gray)
-            
 
         }.navigationTitle("Selection Screen").font(.largeTitle)
             
@@ -53,5 +52,3 @@ struct PlanetCollectionView_Previews: PreviewProvider {
         PlanetCollectionView()
     }
 }
-
-

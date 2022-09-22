@@ -20,14 +20,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     private let swiftUIController = UIHostingController(rootView: PlanetCollectionView())
 
-        
+    @IBOutlet weak var selectPlanetButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's delegate
         sceneView.delegate = self
-        
-
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
