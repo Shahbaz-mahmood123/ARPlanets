@@ -64,7 +64,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let results = sceneView.session.raycast(query)
             
             if let hitResult = results.first {
-                
+                print(hitResult)
                 //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController.
                 if let currentPlanet = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as? String {
                     planetModel.currentPlanet = currentPlanet
