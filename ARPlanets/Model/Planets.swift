@@ -82,15 +82,15 @@ class Planets {
     }
     
     func setRotation() -> [String: CGFloat]?{
-        
-        //TODO: not sure why the rotation is not working correctly, its going to fast and not rotating in the right dirction. 
-        
-//        for planet in arrayOfPlanets {
-//            if planet.name == currentPlanet {
-//                return ["x": CGFloat(planet.rotation.x), "y": CGFloat(planet.rotation.x), "z":CGFloat(planet.rotation.x), "duration": CGFloat(planet.rotation.x)]
-//            }
-//        }
-        
+        //TODO: Rotation could be better need to work on this more i think
+        for planet in arrayOfPlanets {
+            if planet.name == currentPlanet {
+//                print("x\(CGFloat(planet.rotation.x))")
+//                print("y\(CGFloat(planet.rotation.y))")
+//                print("x\(CGFloat(planet.rotation.x))")
+                return ["x": CGFloat(planet.rotation.x), "y": CGFloat(planet.rotation.y), "z":CGFloat(planet.rotation.z), "duration": CGFloat(planet.rotation.duration)]
+            }
+        }
         return ["x": 80, "y":80, "z":0.0, "duration": 3600]
     }
     

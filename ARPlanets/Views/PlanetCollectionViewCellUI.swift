@@ -19,14 +19,15 @@ struct PlanetCollectionViewCellUI: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 50)
                     .frame(width: 200, height: 200).foregroundColor(vm.cellcolor) .background{}
-                Image("moon")
+                Image(name)
                     .aspectRatio(contentMode: .fit)
                     .rotationEffect(.init(degrees: -2))
                     .background{
                         //should create a isHiglighted custom object that holds the planet name and bool for true or false to highlight the object
                     }
             }.onTapGesture {
-                vm.setPlanet(name)
+                vm.setPlanet("Planets\(name)")
+                print(name)
                 //order is important here for setting the field to highlighted
 
                 vm.setCellToHiglightedIfPlanetIsSelected(name: name)

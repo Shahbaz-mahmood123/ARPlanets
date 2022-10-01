@@ -32,7 +32,7 @@ class PlanetCollectionViewModel: ObservableObject{
     
     init(){
         
-        currentPlanetSelection = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+       // currentPlanetSelection = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
         //var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
         //this is really wonky I should probably add an extension to userDefaults for this maybe?
         if let currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as? String {
@@ -40,7 +40,7 @@ class PlanetCollectionViewModel: ObservableObject{
             isHiglighted = IsHiglighted(fieldName: currentPlanetName, isHighlighted: true)
         } else {
             userDefaults.set("Earth Daytime", forKey: UserDefaultsConstants.currentPlanetSelection)
-            var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+            let currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
             currentPlanetSelection = currentPlanetName
             isHiglighted = IsHiglighted(fieldName: currentPlanetName, isHighlighted: true)
         }
@@ -83,14 +83,14 @@ class PlanetCollectionViewModel: ObservableObject{
         //    func setCellToHiglightedIfPlanetIsSelected(planetName: String){
         //        //if same cell is selected set true to false
         //        //if another cell is selected update userDefaults to new planet name and keep isHiglighted value as true
-        ////        if isHiglighted.fieldName == planetName {
-        ////            isHiglighted.isHighlighted = !isHiglighted.isHighlighted
-        ////        }
-        ////        if isHiglighted.fieldName != planetName {
-        ////                isHiglighted.isHighlighted = true
-        ////                isHiglighted.fieldName = planetName
-        ////            setPlanet(planetName)
-        ////        }
+        //        if isHiglighted.fieldName == planetName {
+        //            isHiglighted.isHighlighted = !isHiglighted.isHighlighted
+        //        }
+        //        if isHiglighted.fieldName != planetName {
+        //                isHiglighted.isHighlighted = true
+        //                isHiglighted.fieldName = planetName
+        //            setPlanet(planetName)
+        //        }
         //
     }
 }
