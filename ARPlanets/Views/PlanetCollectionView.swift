@@ -30,10 +30,9 @@ struct PlanetCollectionView: View {
                             }
                         }
                     }.background{
-                        RoundedRectangle(cornerRadius: 10).foregroundColor(Color.black)
+                        RoundedRectangle(cornerRadius: 10).foregroundColor(.clear)
                     }
-                    HStack{
-
+                    HStack{   
                Text("This is Another Section").foregroundColor(Color.white)
                     }.padding()
                     Spacer()

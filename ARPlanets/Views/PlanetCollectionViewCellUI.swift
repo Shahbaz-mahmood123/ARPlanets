@@ -18,7 +18,7 @@ struct PlanetCollectionViewCellUI: View {
         VStack{
             ZStack{
                 RoundedRectangle(cornerRadius: 50)
-                    .frame(width: 200, height: 200).foregroundColor(vm.cellcolor) .background{}
+                    .frame(width: 200, height: 200).foregroundColor(.clear) .background{}
                 Image(name)
                     .aspectRatio(contentMode: .fit)
                     .rotationEffect(.init(degrees: -2))
