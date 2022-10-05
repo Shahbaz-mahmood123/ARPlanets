@@ -17,8 +17,11 @@ struct PlanetCollectionViewCellUI: View {
 
         VStack{
             ZStack{
-                RoundedRectangle(cornerRadius: 50)
-                    .frame(width: 200, height: 200).foregroundColor(.clear) .background{}
+                if vm.isHiglighted.fieldName == name {
+                    RoundedRectangle(cornerRadius: 50)
+                        .frame(width: 200, height: 200).foregroundColor(.white) .background{}
+                }
+
                 Image(name)
                     .aspectRatio(contentMode: .fit)
                     .rotationEffect(.init(degrees: -2))
