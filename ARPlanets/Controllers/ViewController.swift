@@ -68,10 +68,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 //This gets the planet selection from UserDefaults and sets it if it is a null value. This value is set on the PlanetViewController.
                 if let currentPlanet = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as? String {
                     planetModel.currentPlanet = currentPlanet
+
                 } else {
                     userDefaults.set("Earth Daytime", forKey: UserDefaultsConstants.currentPlanetSelection)
                 }
+                
+
                 let node = planetModel.createPlanetNode(atLocation: hitResult)
+                
+                if planetModel.currentPlanet == "moon"{
+                    node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+                } else{
+                    node.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
+                    node.physicsField = SCNPhysicsField.radialGravity()
+                }
                 
                 planetArray.append(node)
                 sceneView.scene.rootNode.addChildNode(node)

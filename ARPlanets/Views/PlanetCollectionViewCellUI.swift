@@ -17,9 +17,12 @@ struct PlanetCollectionViewCellUI: View {
 
         VStack{
             ZStack{
-                if vm.isHiglighted.fieldName == name {
+                if vm.isHiglighted.fieldName == name && vm.isHiglighted.isHighlighted == true{
                     RoundedRectangle(cornerRadius: 50)
                         .frame(width: 200, height: 200).foregroundColor(.white) .background{}
+                } else {
+                    RoundedRectangle(cornerRadius: 50)
+                        .frame(width: 200, height: 200).foregroundColor(.clear) .background{}
                 }
 
                 Image(name)

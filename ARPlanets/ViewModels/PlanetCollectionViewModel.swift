@@ -23,7 +23,7 @@ class PlanetCollectionViewModel: ObservableObject{
         PlanetList(name: "Venus", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Uranus", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Earth Night", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
-        PlanetList(name: "Earth Clouds", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
+//        PlanetList(name: "Earth Clouds", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Jupiter", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
         PlanetList(name: "Sun", radius: 0.05, rotation:Rotation(x: 80, y:80, z:0.0, duration: 3600)),
     ]

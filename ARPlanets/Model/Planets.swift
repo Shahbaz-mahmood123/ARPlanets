@@ -121,7 +121,12 @@ class Planets {
         node.runAction(
             SCNAction.rotateBy(x: x , y: y, z: z, duration: duration))
         }
+        
         //planetArray.append(node)
         return node
+    }
+    
+    func setPhysics(){
+        
     }
 }
