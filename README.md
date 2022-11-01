@@ -6,7 +6,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url] -->
 <!-- [![MIT License][license-shield]][license-url] -->
-[![LinkedIn][linkedin-shield]][https://ca.linkedin.com/in/shahbaz-mahmood-660a76166]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -17,10 +17,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">AR Planets</h3>
 
   <p align="center">
-    project_description
+    A simple IOS ARKit project that allows a user to create their own solar system using AR
     <br />
     <a href="https://github.com/Shahbaz-mahmood123/ARPlanets"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,7 +53,7 @@
       </ul>
     </li> -->
     <!-- <li><a href="#usage">Usage</a></li> -->
-    <li><a href="#roadmap">Roadmap</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -66,9 +66,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+A simple IOS ARKit project that allows a user to create their own solar system using AR. Just a side project I am working on to improve my swift skills!
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+I plan to add quite a few more features overtime such as:
+- Physics to the planets
+- Unique planets 
+- Ability to take videos/pictures 
+- and alot more!
+
+The app uses a mix of Swift UI and UIKit for the entire app and at the moment most of the persistent data is store in userdefaults with a possible move to core data or firebase eventually. 
+
+<!-- 
+[![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,7 +87,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Swift][Next.js]][Next-url]
+* [![Swift][Swift-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -128,7 +139,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
  -->
 
 
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
 - [ ] Feature 1
@@ -138,7 +149,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/Shahbaz-mahmood123/ARPlanets/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -160,33 +171,33 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
+<!-- LICENSE
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Shahbaz Mahmood - [Linked in](https://ca.linkedin.com/in/shahbaz-mahmood-660a76166) - email@email_client.com
+Shahbaz Mahmood - [Linked in](https://ca.linkedin.com/in/shahbaz-mahmood-660a76166) - shahbazmahmooood@gmail.com
 
 Project Link: [https://github.com/Shahbaz-mahmood123/ARPlanets](https://github.com/Shahbaz-mahmood123/ARPlanets)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- ACKNOWLEDGMENTS -->
+<!-- ACKNOWLEDGMENTS
 ## Acknowledgments
 
 * []()
 * []()
 * []()
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -203,7 +214,7 @@ Project Link: [https://github.com/Shahbaz-mahmood123/ARPlanets](https://github.c
 [license-shield]: https://img.shields.io/github/license/Shahbaz-mahmood123/ARPlanets.svg?style=for-the-badge
 [license-url]: https://github.com/Shahbaz-mahmood123/ARPlanets/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://ca.linkedin.com/in/shahbaz-mahmood-660a76166
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Swift-url]: https://www.swift.org/
