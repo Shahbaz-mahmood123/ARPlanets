@@ -31,9 +31,7 @@ class PlanetCollectionViewModel: ObservableObject{
     private let userDefaults = UserDefaults.standard
     
     init(){
-        
-       // currentPlanetSelection = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
-        //var currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as! String
+
         //this is really wonky I should probably add an extension to userDefaults for this maybe?
         if let currentPlanetName = userDefaults.object(forKey: UserDefaultsConstants.currentPlanetSelection) as? String {
             currentPlanetSelection = currentPlanetName
@@ -53,12 +51,12 @@ class PlanetCollectionViewModel: ObservableObject{
         userDefaults.set(selectedPlanet, forKey: UserDefaultsConstants.currentPlanetSelection)
     }
     //Probably should use userdefaults here to set the current planet as highlighted.
-    func setColorForCell(_ isHighlighted: Bool){
+    func setColorForCell(name: String){
         // unset currentplanet if one is selected
-        if isHighlighted == true {
-            cellcolor =  Color.red
+        if isHiglighted.isHighlighted == true && name == isHiglighted.fieldName{
+            cellcolor =  Color.clear
         } else {
-            cellcolor =  Color.cyan
+            cellcolor =  Color.white
         }
     }
     

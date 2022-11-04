@@ -48,6 +48,7 @@ struct PlanetCollectionViewCellUI: View {
                     vm.isHiglighted.isHighlighted = true
                     vm.isHiglighted.fieldName = name
                 }
+                
             }
             Text("\(name)").font(.largeTitle).foregroundColor(Color.red)
         }

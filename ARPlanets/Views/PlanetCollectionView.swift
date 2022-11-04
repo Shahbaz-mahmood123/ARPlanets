@@ -10,7 +10,7 @@ import SwiftUI
 struct PlanetCollectionView: View {
     
     @ObservedObject var vm = PlanetCollectionViewModel()
-    @State var isHiglighted = false
+    //@State var isHiglighted = false
     @State var currentPlanetText = ""
     
     var body: some View {
