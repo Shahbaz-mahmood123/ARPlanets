@@ -20,6 +20,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     private let swiftUIController = UIHostingController(rootView: PlanetCollectionView())
 
+    private let ImageUIController = UIHostingController(rootView: ARImageView())
+
+
     @IBOutlet weak var selectPlanetButton: UIButton!
     
     override func viewDidLoad() {
@@ -31,7 +34,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         //Debug mode
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+//        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
       
         sceneView.autoenablesDefaultLighting = true
     }
@@ -56,7 +59,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        var planetModel = Planets()
+        let planetModel = Planets()
         if let touchLocation = touches.first?.location(in: sceneView){
             
             guard let query = sceneView.raycastQuery(from: touchLocation, allowing: .existingPlaneInfinite, alignment: .any) else {return}
@@ -126,6 +129,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         removeLastPlanet()
     }
     
+    @IBAction func takeScreenshot(_ sender: Any) {
+        let image = sceneView.snapshot()
+        
+        navigationController?.pushViewController(ImageUIController, animated: true)
+    }
 
     func removeLastPlanet(){
         let planetsWithIndex = planetArray.enumerated()
