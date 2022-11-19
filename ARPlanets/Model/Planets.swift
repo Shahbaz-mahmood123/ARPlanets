@@ -25,7 +25,7 @@ class Planets {
     }
     
     private var arrayOfPlanets: [PlanetList] = [
-        PlanetList(name: "moon", radius: 0.01, rotation:Rotation(x: 5, y:360, z:0.0, duration: 1000000000000)),
+        PlanetList(name: "moon", radius: 0.01, rotation:Rotation(x: 5, y:360, z:0.0, duration: 3600)),
         PlanetList(name: "Earth Daytime", radius: 0.05, rotation:Rotation(x: 60, y:60, z:0.0, duration: 3600)),
         PlanetList(name: "Saturn", radius: 0.2, rotation:Rotation(x: 10, y:40, z:0.0, duration: 3600)),
         PlanetList(name: "Mars", radius: 0.004, rotation:Rotation(x: 10, y:65, z:0.0, duration: 3600)),
