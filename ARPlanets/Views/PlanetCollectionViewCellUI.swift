@@ -32,22 +32,11 @@ struct PlanetCollectionViewCellUI: View {
                         //should create a isHiglighted custom object that holds the planet name and bool for true or false to highlight the object
                     }
             }.onTapGesture {
-                vm.setPlanet("Planets\(name)")
+                vm.setPlanet(name)
                 print(name)
-                //order is important here for setting the field to highlighted
-
-                vm.setCellToHiglightedIfPlanetIsSelected(name: name)
                 
-                if vm.isHiglighted.isHighlighted == true && vm.currentPlanetSelection == name {
-                    print(currentColor)
-                    currentColor = Color.black
-                    vm.isHiglighted.isHighlighted = false
-                    print(currentColor)
-                } else {
-                    currentColor = Color.cyan
-                    vm.isHiglighted.isHighlighted = true
-                    vm.isHiglighted.fieldName = name
-                }
+                vm.setCellToHiglightedIfPlanetIsSelected(name: name)
+                print(vm.isHiglighted)
                 
             }
             Text("\(name)").font(.largeTitle).foregroundColor(Color.red)
@@ -58,6 +47,6 @@ struct PlanetCollectionViewCellUI: View {
 
 struct PlanetCollectionViewCellUI_Previews: PreviewProvider {
     static var previews: some View {
-        PlanetCollectionViewCellUI()
+        PlanetCollectionViewCellUI(name: "Sun")
     }
 }

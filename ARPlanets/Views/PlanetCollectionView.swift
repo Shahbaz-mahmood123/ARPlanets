@@ -13,6 +13,7 @@ struct PlanetCollectionView: View {
     //@State var isHiglighted = false
     @State var currentPlanetText = ""
     
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -28,10 +29,8 @@ struct PlanetCollectionView: View {
                                     PlanetCollectionViewCellUI(name: planet.name).padding(.horizontal, 20)
                                 }
                             }
-                        }
-                    }.background{
-                        RoundedRectangle(cornerRadius: 10).foregroundColor(.clear)
-                    }
+                        }.accessibilityIdentifier("PlanetScrollView")
+                    }                    
                     HStack{   
                Text("This is Another Section").foregroundColor(Color.white)
                     }.padding()

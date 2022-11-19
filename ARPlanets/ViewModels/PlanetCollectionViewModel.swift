@@ -74,10 +74,13 @@ class PlanetCollectionViewModel: ObservableObject{
         
         if isHiglighted.fieldName != name {
             if isHiglighted.isHighlighted == false {
+                isHiglighted.fieldName = name
                 isHiglighted.isHighlighted = true
             }
             setPlanet(name)
         }
+        isHiglighted.fieldName = name
+        
         //    func setCellToHiglightedIfPlanetIsSelected(planetName: String){
         //        //if same cell is selected set true to false
         //        //if another cell is selected update userDefaults to new planet name and keep isHiglighted value as true
