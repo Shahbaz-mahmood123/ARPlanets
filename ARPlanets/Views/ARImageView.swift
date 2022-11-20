@@ -11,7 +11,14 @@ struct ARImageView: View {
     @ObservedObject var imageModel = ARImageModel()
     var body: some View {
         ZStack{
-            Image(uiImage: imageModel.image)
+            VStack{
+                Button("test") {
+                    UIImageWriteToSavedPhotosAlbum(imageModel.image, nil, nil, nil)
+                }
+
+            }
+        }.background{
+            Image(uiImage: imageModel.image).aspectRatio( contentMode: .fit)
         }
     }
 }

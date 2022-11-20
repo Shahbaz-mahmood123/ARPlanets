@@ -27,6 +27,8 @@
 		D5AC269328A56F7000CEE78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AC269128A56F7000CEE78D /* LaunchScreen.storyboard */; };
 		D5AC269D28A70BC700CEE78D /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC269C28A70BC700CEE78D /* Planets.swift */; };
 		D5BD542328D51C1400B655EB /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BD542228D51C1400B655EB /* UserDefaultExtension.swift */; };
+		D5D044962929A87C001583E5 /* ARImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D044952929A87C001583E5 /* ARImageModel.swift */; };
+		D5E23BC02929A1E0002CF0B1 /* ARImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E23BBF2929A1E0002CF0B1 /* ARImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		D5AC269228A56F7000CEE78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5AC269C28A70BC700CEE78D /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
 		D5BD542228D51C1400B655EB /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
+		D5D044952929A87C001583E5 /* ARImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARImageModel.swift; sourceTree = "<group>"; };
+		D5E23BBF2929A1E0002CF0B1 /* ARImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				D590FE0728B6CA10002ACCA6 /* PlanetCollectionView.swift */,
 				D590FE0E28B81938002ACCA6 /* PlanetCollectionViewCellUI.swift */,
 				D549E47428CE715500E1ACB2 /* CustomArcShape.swift */,
+				D5E23BBF2929A1E0002CF0B1 /* ARImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			children = (
 				D5AC269C28A70BC700CEE78D /* Planets.swift */,
 				D590FE5F28C1471F002ACCA6 /* Sun.swift */,
+				D5D044952929A87C001583E5 /* ARImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BD542328D51C1400B655EB /* UserDefaultExtension.swift in Sources */,
+				D5E23BC02929A1E0002CF0B1 /* ARImageView.swift in Sources */,
 				D590FE0F28B81938002ACCA6 /* PlanetCollectionViewCellUI.swift in Sources */,
 				D5AC268B28A56F6E00CEE78D /* ViewController.swift in Sources */,
+				D5D044962929A87C001583E5 /* ARImageModel.swift in Sources */,
 				D549E47528CE715500E1ACB2 /* CustomArcShape.swift in Sources */,
 				D590FE0628B42442002ACCA6 /* PlanetDTO.swift in Sources */,
 				D5AC268728A56F6E00CEE78D /* AppDelegate.swift in Sources */,
@@ -506,6 +514,7 @@
 				DEVELOPMENT_TEAM = SCSMQV833T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We will only save images to your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -513,6 +522,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,6 +546,7 @@
 				DEVELOPMENT_TEAM = SCSMQV833T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We will only save images to your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -543,6 +554,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
