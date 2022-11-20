@@ -36,22 +36,32 @@
                                     <action selector="selectPlanet:" destination="BV1-FR-VrT" eventType="touchUpInside" id="tdR-6e-fWx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-8k-lup">
-                                <rect key="frame" x="199" y="733" width="118" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Take Picture"/>
-                                <connections>
-                                    <action selector="takeScreenshot:" destination="BV1-FR-VrT" eventType="touchUpInside" id="kYm-xe-PCS"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eOf-8S-crC">
+                                <rect key="frame" x="206" y="736" width="117.5" height="34.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-8k-lup">
+                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Take Picture"/>
+                                        <connections>
+                                            <action selector="takeScreenshot:" destination="BV1-FR-VrT" eventType="touchUpInside" id="kYm-xe-PCS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aFB-8k-lup" secondAttribute="bottom" id="lKR-7N-Amm"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="eOf-8S-crC" secondAttribute="trailing" constant="90.5" id="1G4-4x-XyQ"/>
                             <constraint firstItem="TxX-st-Bd5" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="56l-hF-ZeG"/>
+                            <constraint firstItem="eOf-8S-crC" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="206" id="BvC-5F-whj"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="TxX-st-Bd5" secondAttribute="bottom" id="G8y-r1-gKp"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="eOf-8S-crC" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="644" id="HcD-0K-vnl"/>
                             <constraint firstItem="GnG-de-bRo" firstAttribute="bottom" secondItem="TxX-st-Bd5" secondAttribute="bottom" id="JJ0-Z5-K4d"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="TxX-st-Bd5" secondAttribute="trailing" id="R9v-5N-oAa"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
