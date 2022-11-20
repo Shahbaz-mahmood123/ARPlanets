@@ -20,8 +20,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     private let swiftUIController = UIHostingController(rootView: PlanetCollectionView())
 
-    private let ImageUIController = UIHostingController(rootView: ARImageView())
-
 
     @IBOutlet weak var selectPlanetButton: UIButton!
     
@@ -130,7 +128,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func takeScreenshot(_ sender: Any) {
+    
         let image = sceneView.snapshot()
+        var arImageModel = ARImageModel()
+        arImageModel.image = image
+        let ImageUIController = UIHostingController(rootView: ARImageView(imageModel: arImageModel))
+        
         
         navigationController?.pushViewController(ImageUIController, animated: true)
     }

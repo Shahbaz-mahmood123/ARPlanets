@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ARImageView: View {
+    @ObservedObject var imageModel = ARImageModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Image(uiImage: imageModel.image)
+        }
     }
 }
 
