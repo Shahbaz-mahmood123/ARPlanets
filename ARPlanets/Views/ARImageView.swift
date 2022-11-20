@@ -10,12 +10,16 @@ import SwiftUI
 struct ARImageView: View {
     @ObservedObject var imageModel = ARImageModel()
     var body: some View {
-        ZStack{
-            VStack{
-                Button("test") {
-                    UIImageWriteToSavedPhotosAlbum(imageModel.image, nil, nil, nil)
+        ZStack(alignment: .topTrailing){
+            VStack(alignment: .trailing){
+                HStack(alignment:.top){
+                    Spacer()
+                    Button("Save") {
+                        UIImageWriteToSavedPhotosAlbum(imageModel.image, nil, nil, nil)
+                    }.padding(10)
+                    
                 }
-
+                Spacer()
             }
         }.background{
             Image(uiImage: imageModel.image).aspectRatio( contentMode: .fit)
