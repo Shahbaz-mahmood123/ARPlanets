@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ARImageView: View {
     @ObservedObject var imageModel = ARImageModel()
+    @State private var showingAlert = false
     var body: some View {
         ZStack(alignment: .topTrailing){
             VStack(alignment: .trailing){
@@ -16,7 +17,10 @@ struct ARImageView: View {
                     Spacer()
                     Button("Save") {
                         UIImageWriteToSavedPhotosAlbum(imageModel.image, nil, nil, nil)
-                    }.padding(10)
+                        showingAlert = true
+                    }.padding(10)        .alert("Image Saved", isPresented: $showingAlert) {
+                        Button("Close", role: .cancel) { }
+                    }
                     
                 }
                 Spacer()
