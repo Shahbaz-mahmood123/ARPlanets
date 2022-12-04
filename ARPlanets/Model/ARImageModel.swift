@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 
-class ARImageModel:ObservableObject{
+class ARImageModel: ObservableObject {
     @Published var image = UIImage()
+    @Published var isHidden = true
 }

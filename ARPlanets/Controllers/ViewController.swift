@@ -29,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+       // sceneView.showsStatistics = true
         
         //Debug mode
 //        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
@@ -81,7 +81,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
                 } else{
                     node.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
-                    node.physicsField = SCNPhysicsField.radialGravity()
+                    node.physicsField = SCNPhysicsField.linearGravity()
                 }
                 
                 planetArray.append(node)
@@ -115,6 +115,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         plane.materials = [gridMaterial]
         
         planeNode.geometry = plane
+        //planeNode.physicsField = SCNPhysicsField.vortex()
         
         return planeNode
     }

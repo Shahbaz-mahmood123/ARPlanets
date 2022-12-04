@@ -95,3 +95,6 @@ class PlanetCollectionViewModel: ObservableObject{
         //
     }
 }
+
+
+

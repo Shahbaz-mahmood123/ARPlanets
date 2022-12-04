@@ -80,9 +80,13 @@ The app uses a mix of Swift UI and UIKit for the entire app and at the moment mo
 [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
   <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
-    <img src="Images/AppPicture.jpeg" alt="Logo" width="150" height="200">
+    
   </a>
 
+<div align="center">
+  <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
+   <img src="Images/AppPicture.jpeg" alt="Logo" width="200" height="300">
+  </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,6 +225,7 @@ Project Link: [https://github.com/Shahbaz-mahmood123/ARPlanets](https://github.c
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Swift-url]: https://www.swift.org/
+[Swift]: Images/Swift.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
