@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">AR Planets</h3>
@@ -79,6 +79,9 @@ The app uses a mix of Swift UI and UIKit for the entire app and at the moment mo
 <!-- 
 [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
+  <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
+    <img src="Images/AppPicture.jpeg" alt="Logo" width="150" height="200">
+  </a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
