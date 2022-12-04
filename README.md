@@ -13,9 +13,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
+  <!-- <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
     <img src="Images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">AR Planets</h3>
 
