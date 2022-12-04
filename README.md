@@ -25,8 +25,8 @@
     <a href="https://github.com/Shahbaz-mahmood123/ARPlanets"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">View Demo</a>
-    ·
+    <!-- <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">View Demo</a>
+    · -->
     <a href="https://github.com/Shahbaz-mahmood123/ARPlanets/issues">Report Bug</a>
     ·
     <a href="https://github.com/Shahbaz-mahmood123/ARPlanets/issues">Request Feature</a>
