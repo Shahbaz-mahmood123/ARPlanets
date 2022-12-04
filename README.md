@@ -85,7 +85,7 @@ The app uses a mix of Swift UI and UIKit for the entire app and at the moment mo
 
 <div align="center">
   <a href="https://github.com/Shahbaz-mahmood123/ARPlanets">
-   <img src="Images/AppPicture.jpeg" alt="Logo" width="200" height="300">
+   <img src="Images/AppPicture.jpeg" alt="Logo" width="350" height="500">
   </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
