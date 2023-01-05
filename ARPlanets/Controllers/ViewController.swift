@@ -131,7 +131,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func takeScreenshot(_ sender: Any) {
     
         let image = sceneView.snapshot()
-        var arImageModel = ARImageModel()
+        let arImageModel = ARImageModel()
         arImageModel.image = image
         let ImageUIController = UIHostingController(rootView: ARImageView(imageModel: arImageModel))
         
